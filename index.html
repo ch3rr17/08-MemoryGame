@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Memory Game</title>
+
+		<!-- Local bower bootstrap version -->
+		<link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+
+		<!-- External CSS -->
+		<link rel="stylesheet" type="text/css" href="styles/style.css">
+
+	</head>
+
+	<body ng-controller="CardController as vm">
+		<div class="container">
+			<h1 class="text-center">Memory Game</h1>
+			<div class="panel panel-default">
+  				<div class="panel-body">
+					<!-- Start of row --> 
+					<div class='row'>
+
+						<!-- Start of Game -->
+						<div class="col-xs-2" ng-repeat="card in vm.cards">
+							<div ng-click="vm.initialClick()" ng-show="card.cardIsFlipped"><img class="img-fluid" ng-src="images/{{card.value}}"></div>
+                            <div ng-click="vm.initialClick(card)" ng-hide="card.cardIsFlipped"><img class="img-fluid" ng-src="images/minion.logo.png"></div>
+						</div>
+
+					</div><!-- end of row -->
+				</div><!-- end of panel body -->
+			</div><!-- end of panel container -->
+		</div><!-- end of main div container -->
+
+		<!-- jQuery -->
+		<script src="//code.jquery.com/jquery.js"></script>
+		<!-- Bootstrap JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+		<!-- Local AngularJS Library and JavaScript Application files -->
+		<script type="text/javascript" src="bower_components/angular/angular.js"></script>
+		<script src="app/app.js"></script>
+		<script src="app/card.controller.js"></script>
+    	
+		
+	</body>
+</html>

@@ -1,0 +1,22 @@
+{
+  "name": "08-MemoryGame",
+  "main": "index.js",
+  "homepage": "https://github.com/ch3rr17/08-MemoryGame",
+  "authors": [
+    "ch3rr17 <cherr.batac@gmail.com>"
+  ],
+  "description": "Memory Card Game",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^2.2.3",
+    "bootstrap": "^3.3.6",
+    "angular": "^1.5.5"
+  }
+}
